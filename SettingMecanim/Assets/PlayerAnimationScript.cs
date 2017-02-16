@@ -24,6 +24,14 @@ public class PlayerAnimationScript : MonoBehaviour
         {
             animator.SetInteger(animationType, 1);
         }
+        else
+        {
+            //AnimatorStateInfo animInfo = animator.GetCurrentAnimatorStateInfo(0);
+            //if (animInfo.normalizedTime < 1.0f)
+            //{
+            //    animator.SetInteger(animationType, 0);
+            //}
+        }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             animator.SetInteger(animationType, 2);
