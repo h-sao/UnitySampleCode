@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        transform.position += (Vector3.forward * 10f * Time.deltaTime);
+ //       transform.position += (Vector3.forward * 10f * Time.deltaTime);
 
     }
 

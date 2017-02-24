@@ -36,5 +36,10 @@ public class PlayerAnimationScript : MonoBehaviour
         {
             animator.SetInteger(animationType, 2);
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            animator.SetInteger(animationType, 3);
+        }
     }
 }
