@@ -15,6 +15,9 @@
             #pragma fragment frag
  			#pragma target 3.0
  			
+ 			// Enable Graphics debug on VS
+			#pragma enable_d3d11_debug_symbols
+
  			#include "UnityCG.cginc"
 
             uniform sampler2D _MainTex;
