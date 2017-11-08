@@ -1,4 +1,6 @@
-﻿// Gradational shader
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Gradational shader
 Shader "Custom/BG_shader" {
 	Properties
 	{
@@ -29,7 +31,7 @@ Shader "Custom/BG_shader" {
 			VertexOutput vert( VertexInput input )
 			{
 				VertexOutput output;
-				output.v = mul(UNITY_MATRIX_MVP, input.pos);
+				output.v = UnityObjectToClipPos(input.pos);
 				output.uv = input.uv;
 
 				return output;
