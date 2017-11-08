@@ -1,4 +1,6 @@
-﻿Shader "Custom/snow" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/snow" {
     Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
     }
@@ -63,7 +65,7 @@
 					finalposition = tv0;
 				}
             	v2f o;
-			    o.pos = mul( UNITY_MATRIX_MVP, float4(finalposition,1));
+			    o.pos = UnityObjectToClipPos( float4(finalposition,1));
 				o.uv = MultiplyUV(UNITY_MATRIX_TEXTURE0, v.texcoord);
             	return o;
             }
